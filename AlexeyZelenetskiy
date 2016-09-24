@@ -1,0 +1,19 @@
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <vector>
+#include <boost/algorithm/string.hpp>
+using namespace std;
+
+void f(const string & s)
+{
+    vector<string> v;
+    boost::split(s,v,boost::is_any_of(",."));
+    for(size_t i(0); i < v.size(); i++)
+      if(v[i].find("ss"))
+          cout << v[i] << endl;
+}
+
+int main(){
+    return 0;
+}
